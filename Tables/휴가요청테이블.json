@@ -1,0 +1,344 @@
+{
+  "Name": "휴가요청테이블",
+  "ShowBuiltInFields": true,
+  "FlowProcess": {
+    "IsEnabled": true,
+    "FlowStates": [
+      {
+        "Id": "a84c01fd-be55-425e-99fc-95d5b718ae12",
+        "StateName": "새로만들기"
+      },
+      {
+        "Id": "6e100489-6044-41d0-8ac1-a7a309c6d119",
+        "StateName": "제출"
+      },
+      {
+        "Id": "c85a57d0-a20d-4d77-9eb3-cc8430c760bb",
+        "StateName": "팀장 승인"
+      },
+      {
+        "Id": "be56495b-3ff7-4585-8dbb-408181d97708",
+        "StateName": "최종 승인"
+      },
+      {
+        "Id": "9f5fd7c6-211f-42b0-9b65-07b98ef667f6",
+        "StateName": "반려"
+      }
+    ],
+    "FlowPaths": [
+      {
+        "StartState": {
+          "Id": "a84c01fd-be55-425e-99fc-95d5b718ae12",
+          "StateName": "새로만들기"
+        },
+        "Action": {
+          "ActionName": "제출",
+          "GUID": "3e675e37-bd11-4e26-9a92-aed367a7c4d6"
+        },
+        "Condition": {
+          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+          "CompareType": 6,
+          "ColumnBindingInfo": {
+            "TableName": "휴가요청테이블",
+            "ColumnName": "FGC_Creator",
+            "GUID": "b1c5a16a-5a13-4cb6-beed-ae68804d116e",
+            "AttachType": {
+              "$type": "ForguncyDataAccess.UserColumnAttachObj, ForguncyDataAccess",
+              "UserColumnAttachType": 3
+            }
+          },
+          "Value": "Member"
+        },
+        "ToState": {
+          "Id": "6e100489-6044-41d0-8ac1-a7a309c6d119",
+          "StateName": "제출"
+        },
+        "Assignees": [
+          {
+            "FlowProcessRoleType": 1,
+            "Name": "Leader"
+          }
+        ],
+        "Commands": {
+          "GUID": "7feafcb9-1ab8-44bf-8a2c-b454bf2394e3",
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.SendMailCommand, ServerDesignerCommon",
+              "From": "%CurrentUser%",
+              "EnhancedRecipient": {
+                "CommonValue": "%AssignTo%"
+              },
+              "Subject": "휴가 결재 승인 요청",
+              "Content": "아래와 같이 [%CurrentRow=(휴가요청테이블,생성인)%] 가 휴가 결재를 등록하였습니다.\r\n\r\n - 기안자 : [%CurrentRow=(휴가요청테이블,생성인)%]\r\n - 휴가일: [%CurrentRow=(휴가요청테이블,시작일)%]~[% CurrentRow=(휴가요청테이블,종료일)%]\r\n - 기간: [%CurrentRow=(휴가요청테이블,기간)%]\r\n - 사유 : [%CurrentRow=(휴가요청테이블,사유)%]\r\n\r\n[%PageNavigate=(휴가 결재 페이지,결재하기)%]",
+              "ID": "428795531d19407ca4d44559a43ab0b3"
+            }
+          ],
+          "PreCommandList": []
+        },
+        "Errors": []
+      },
+      {
+        "StartState": {
+          "Id": "a84c01fd-be55-425e-99fc-95d5b718ae12",
+          "StateName": "새로만들기"
+        },
+        "Action": {
+          "ActionName": "제출",
+          "GUID": "3e675e37-bd11-4e26-9a92-aed367a7c4d6"
+        },
+        "Condition": {
+          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+          "CompareType": 6,
+          "ColumnBindingInfo": {
+            "TableName": "휴가요청테이블",
+            "ColumnName": "FGC_Creator",
+            "GUID": "3bd58da5-76fa-492b-a09b-7d08e6b9573d",
+            "AttachType": {
+              "$type": "ForguncyDataAccess.UserColumnAttachObj, ForguncyDataAccess",
+              "UserColumnAttachType": 3
+            }
+          },
+          "Value": "Leader"
+        },
+        "ToState": {
+          "Id": "c85a57d0-a20d-4d77-9eb3-cc8430c760bb",
+          "StateName": "팀장 승인"
+        },
+        "Assignees": [
+          {
+            "FlowProcessRoleType": 1,
+            "Name": "Manager"
+          }
+        ],
+        "Errors": []
+      },
+      {
+        "StartState": {
+          "Id": "6e100489-6044-41d0-8ac1-a7a309c6d119",
+          "StateName": "제출"
+        },
+        "Action": {
+          "ActionName": "승인",
+          "GUID": "7f23b058-4695-4633-ad2c-ec4ba9d85378"
+        },
+        "ToState": {
+          "Id": "c85a57d0-a20d-4d77-9eb3-cc8430c760bb",
+          "StateName": "팀장 승인"
+        },
+        "Assignees": [
+          {
+            "FlowProcessRoleType": 1,
+            "Name": "Manager"
+          }
+        ],
+        "Commands": {
+          "GUID": "f2ad67f8-949c-404e-8612-b4ced7c32871",
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.SendMailCommand, ServerDesignerCommon",
+              "From": "%CurrentUser%",
+              "EnhancedRecipient": {
+                "CommonValue": "%AssignTo%"
+              },
+              "Subject": "휴가 결재 승인 요청",
+              "Content": "아래와 같이 [%CurrentRow=(휴가요청테이블,생성인)%] 가 휴가 결재를 등록하였습니다.\r\n\r\n - 기안자 : [%CurrentRow=(휴가요청테이블,생성인)%]\r\n - 휴가일: [%CurrentRow=(휴가요청테이블,시작일)%]~[% CurrentRow=(휴가요청테이블,종료일)%]\r\n - 기간: [%CurrentRow=(휴가요청테이블,기간)%]\r\n - 사유 : [%CurrentRow=(휴가요청테이블,사유)%]\r\n\r\n [%PageNavigate=(휴가 결재 페이지,결재하기)%]",
+              "ID": "70c6faa9bca84a48ac792ff813634a72"
+            }
+          ],
+          "PreCommandList": []
+        },
+        "Errors": []
+      },
+      {
+        "StartState": {
+          "Id": "6e100489-6044-41d0-8ac1-a7a309c6d119",
+          "StateName": "제출"
+        },
+        "Action": {
+          "ActionName": "반려",
+          "GUID": "ef95e649-967c-490c-8cdf-0e69320f728d"
+        },
+        "ToState": {
+          "Id": "9f5fd7c6-211f-42b0-9b65-07b98ef667f6",
+          "StateName": "반려"
+        },
+        "Assignees": [
+          {
+            "FlowProcessRoleType": 3,
+            "Name": "Creator"
+          }
+        ],
+        "Commands": {
+          "GUID": "86f884a2-509a-4992-821f-5b638520b5db",
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.SendMailCommand, ServerDesignerCommon",
+              "From": "%CurrentUser%",
+              "EnhancedRecipient": {
+                "CommonValue": "%Creator%"
+              },
+              "Subject": "휴가 반려 안내 메일",
+              "Content": "아래와 같이 [%CurrentRow=(휴가요청테이블,생성인)%] 가 휴가 결재가 반려되었습니다.\r\n\r\n - 기안자 : [%CurrentRow=(휴가요청테이블,생성인)%]\r\n - 휴가일: [%CurrentRow=(휴가요청테이블,시작일)%]~[%CurrentRow=(휴가요청테이블,종료일)%]\r\n - 기간: [%CurrentRow=(휴가요청테이블,기간)%]\r\n - 사유 : [%CurrentRow=(휴가요청테이블,사유)%]\r\n - 반려자 : [%CurrentRow=(휴가요청테이블,최종 개정인)%]\r\n - 반려 사유 : [%CurrentRow=(휴가요청테이블_워크플로우 내역 보기,메모)%]\r\n\r\n [%PageNavigate=(휴가 결재 페이지,확인하기)%]",
+              "ID": "b781b9a0902d48eb83a43fa2820c070a"
+            }
+          ],
+          "PreCommandList": []
+        },
+        "Errors": []
+      },
+      {
+        "StartState": {
+          "Id": "c85a57d0-a20d-4d77-9eb3-cc8430c760bb",
+          "StateName": "팀장 승인"
+        },
+        "Action": {
+          "ActionName": "승인",
+          "GUID": "d031916a-f74c-4b76-b6d0-981f35df8502"
+        },
+        "ToState": {
+          "Id": "be56495b-3ff7-4585-8dbb-408181d97708",
+          "StateName": "최종 승인"
+        },
+        "Assignees": [
+          {
+            "FlowProcessRoleType": 3,
+            "Name": "Creator"
+          }
+        ],
+        "Commands": {
+          "GUID": "6db0ef2d-f4b0-4721-b4bc-d831037eac45",
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.SendMailCommand, ServerDesignerCommon",
+              "From": "%CurrentUser%",
+              "EnhancedRecipient": {
+                "CommonValue": "%Creator%",
+                "NullFormulaValueQueryPolicy": 0
+              },
+              "Subject": "휴가 최종 승인 안내",
+              "Content": "아래와 같이 [%CurrentRow=(휴가요청테이블,생성인)%] 가 휴가 결재가 승인 완료되었습니다.\r\n\r\n - 기안자 : [%CurrentRow=(휴가요청테이블,생성인)%]\r\n - 휴가일: [%CurrentRow=(휴가요청테이블,시작일)%]~[%CurrentRow=(휴가요청테이블,종료일)%]\r\n - 기간: [%CurrentRow=(휴가요청테이블,기간)%]\r\n - 사유 : [%CurrentRow=(휴가요청테이블,사유)%]\r\n \r\n [%PageNavigate=(휴가 결재 페이지,확인하기)%]",
+              "ID": "4bb28fb89da74e05baaac170d7dd9424"
+            }
+          ],
+          "PreCommandList": []
+        },
+        "Errors": []
+      },
+      {
+        "StartState": {
+          "Id": "c85a57d0-a20d-4d77-9eb3-cc8430c760bb",
+          "StateName": "팀장 승인"
+        },
+        "Action": {
+          "ActionName": "반려",
+          "GUID": "1b693ac1-1c38-47c8-a3b4-97df3de688db"
+        },
+        "ToState": {
+          "Id": "9f5fd7c6-211f-42b0-9b65-07b98ef667f6",
+          "StateName": "반려"
+        },
+        "Assignees": [
+          {
+            "FlowProcessRoleType": 3,
+            "Name": "Creator"
+          }
+        ],
+        "Commands": {
+          "GUID": "53236c7d-2398-4fd2-b00b-8eb1b3a6e5dd",
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.SendMailCommand, ServerDesignerCommon",
+              "From": "%CurrentUser%",
+              "EnhancedRecipient": {
+                "CommonValue": "%Creator%"
+              },
+              "Subject": "휴가 반려 안내 메일",
+              "Content": "아래와 같이 [%CurrentRow=(휴가요청테이블,생성인)%] 가 휴가 결재가 반려되었습니다.\r\n\r\n - 기안자 : [%CurrentRow=(휴가요청테이블,생성인)%]\r\n - 휴가일: [%CurrentRow=(휴가요청테이블,시작일)%]~[%CurrentRow=(휴가요청테이블,종료일)%]\r\n - 기간: [%CurrentRow=(휴가요청테이블,기간)%]\r\n - 사유 : [%CurrentRow=(휴가요청테이블,사유)%]\r\n - 반려자 : [%CurrentRow=(휴가요청테이블,최종 개정인)%]\r\n - 반려 사유 : [%CurrentRow=(휴가요청테이블_워크플로우 내역 보기,메모)%]\r\n\r\n [%PageNavigate=(휴가 결재 페이지,확인하기)%]",
+              "ID": "59b9ab52f8a84918b9e857bd6ba40ed9"
+            }
+          ],
+          "PreCommandList": []
+        },
+        "Errors": []
+      }
+    ]
+  },
+  "Columns": [
+    {
+      "$type": "Forguncy.Model.Tables.BindingColumn, ServerDesignerCommon",
+      "Required": true,
+      "Unique": true,
+      "AutoIncrement": true,
+      "DatabaseColumnType": "System.Int64",
+      "MaxLength": -1,
+      "Name": "ID",
+      "ColumnType": "System.Int64, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.Model.Tables.BindingColumn, ServerDesignerCommon",
+      "DatabaseColumnType": "System.String",
+      "Name": "종류",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.Model.Tables.BindingColumn, ServerDesignerCommon",
+      "DatabaseColumnType": "System.String",
+      "Name": "사유",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.Model.Tables.BindingColumn, ServerDesignerCommon",
+      "DatabaseColumnType": "System.Int64",
+      "Name": "기간",
+      "ColumnType": "System.Int64, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.Model.Tables.BindingColumn, ServerDesignerCommon",
+      "DatabaseColumnType": "System.Double",
+      "Name": "시작일",
+      "ColumnType": "System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.Model.Tables.BindingColumn, ServerDesignerCommon",
+      "DatabaseColumnType": "System.Double",
+      "Name": "종료일",
+      "ColumnType": "System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.Model.Tables.BindingColumn, ServerDesignerCommon",
+      "DatabaseColumnType": "System.String",
+      "Name": "FGC_State",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.Model.Tables.BindingColumn, ServerDesignerCommon",
+      "DatabaseColumnType": "System.String",
+      "Name": "FGC_AssignTo",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.Model.Tables.UserExtraBingingColumn, ServerDesignerCommon",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+      "Name": "FGC_Creator"
+    },
+    {
+      "$type": "Forguncy.Model.Tables.DateExtraBingingColumn, ServerDesignerCommon",
+      "ColumnType": "System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+      "Name": "FGC_CreateDate"
+    },
+    {
+      "$type": "Forguncy.Model.Tables.UserExtraBingingColumn, ServerDesignerCommon",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+      "Name": "FGC_LastModifier"
+    },
+    {
+      "$type": "Forguncy.Model.Tables.DateExtraBingingColumn, ServerDesignerCommon",
+      "ColumnType": "System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+      "Name": "FGC_LastModifyDate"
+    }
+  ],
+  "PrimaryKey": [
+    "ID"
+  ],
+  "Relations": []
+}
