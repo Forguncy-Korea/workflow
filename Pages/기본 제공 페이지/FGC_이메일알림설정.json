@@ -396,8 +396,8 @@
   "Values": {
     "5,20": "이메일 알림 설정",
     "8,20": "알림 설정 유형을 선택 하세요",
-    "19,20": "예",
-    "22,20": "취소"
+    "20,20": "예",
+    "23,20": "취소"
   },
   "AttachInfos": {
     "10,20": {
@@ -430,7 +430,7 @@
         "ForguncyAttribute": "MailSubscription_Choice"
       }
     },
-    "19,20": {
+    "20,20": {
       "CellType": {
         "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
         "Text": "예",
@@ -439,7 +439,7 @@
         "ForguncyAttribute": "MailSubscription_Button"
       }
     },
-    "22,20": {
+    "23,20": {
       "CellType": {
         "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
         "CommandList": [
@@ -507,8 +507,8 @@
       "5,20": 0,
       "8,20": 1,
       "10,20": 2,
-      "19,20": 3,
-      "22,20": 4
+      "20,20": 3,
+      "23,20": 4
     },
     "SheetStyle": {
       "FontFamily": 0,
@@ -517,10 +517,10 @@
     }
   },
   "Spans": [
-    "19,20,2,14",
-    "22,20,1,14",
-    "10,20,8,14",
-    "5,20,2,14"
+    "5,20,2,14",
+    "23,20,1,14",
+    "20,20,2,14",
+    "10,20,9,14"
   ],
   "PageInfo": {
     "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
@@ -550,4 +550,4 @@
       "Size": "400,440"
     }
   ]
-}//OJEAzQebMkP3JnJFI7Ii7dsV6oAhtY+G8b7vr2ryUsikkoH46l2tp8HHiXlF9i1o6U+ZSm89Mp8yXZ8AWsihg/K8H6towd3h8jbp6Znk3pBwU1zlMAUNTSnYGkMTflQYviBZ81zk7OjLkM1vlOTWmM52g2TL1WnTPiLeuvfXyusZ7eL8t2qZxVa83SiamJNPhSgPX5x4SNC8Zd7kIkFcuANimIQ1cpVcHpBdt6lNeyw0ilFXdB8PxkriYkYK31HvkEBDo3nTwjbzwNdubUNIojdcNwEe/fXN9zVopumhTx5PJpZLvBf2seTjhICJP+xdUNpCuzfrgMfxsrS0zxpfHoQBK/xu0MwzdRSyLKQGxAsjnMOWogQqXnfyP0jX3gre+J4LVOSbB6iMZ1Kk/S5brshM4ueHQhZAHIQsW/IdmZweCwT3Ceh5JsBwTh0uko4ApQYhYT2gFUjjOzJuObUvvnSbHbej2ZRtnAOHv99SkRwavN6TKp2tKQqOm9XSNKQnz1M3NJ+wuRFTdtD56jlzoecDeQK4c1frblc2jDnsW8WKiBgAYyslR8DqEDC9GmmYxBOMXHu7ld2SnuANyNlL2eAdt4tQ8Q0Slj9VPTziGaZ8m4lFqjQKpQdgIjgIR5yjhyYRdWM7u/929r+9QFx9QydfHoAWSFldzj36rO1BN+QTM6mFfw5gWIq2GgKzPY2TAEFITZJ4Fc/z4SYH4ByRt1rhHNqyKXieQRwWVAbP1m8dmeNwN4UoE1k/INxTPjPeHqBpnJtqQtvup4KwocLIVnpcDP86fH40+f+1qghiJZjshlYqwfwSTFGiaYRrKLa6P4A505EcuGNxJdNvmBXHnLf8bV1RP9GiyUrHXEKI/NqH3y52Ezq6AGN7Q5EIzFUWIoEfaXc6jIMa/dua/MOXIQ==|920
+}//oa41N/Ez8Vbbmhh55C4BF/UvmaqWLH6g+pJRFYFZg0tOAZshxYiw/BLmRT2Fo+HC2LyerjP1BmlqHZLLCAZqWojrmqPJ2PKtntjGaukrVgmZVz5VJYuLDbdy5fs9biZlIq+7Phrm/4HRpgFWo5xVv9cyNbXogjwkjicepkviVtV/RP+r18svwuIvmxyFul9ObWQc/1U4NeIUhdb1Jyv8vcS7nVAIDILLrGVlWKE7f+VHl/UBlLr1piWiaw5ZT0hu17ifKoVmGramdqmatiOk8Qr2VyALBAvITOkIwZpTFZj72ZuAHSULXnGJDrGzm198ytHw/4q0LxflrorSMFKrkHc53HnmxlHg8uvd50Kun2Qjhj84RmCsW54gkMpSMblmeW1enFGNlnfP7GAJ3+cZsVn29zeMTT88OS7qXG+7AFWTV43muPJ00CDgmedantKo1RnxhFf6JZNo4zw0mE8ryHwCFTxpy995OhCjaiaatsU8P8Og0Yyr2MLZNcHmiR6UH2Y+hhYNVX6g2Bk+OIO2YmE1O18uM8LJ4zhx7aRP4VDY6k7mOWPXtZhwBbMnrZJq31eZc0BvqmYYK4qTA8IAUNrVM1ISfSuKNk9tGSiIXKl+uWQQqoeVX3h2jo4cq58OL5mDKNr9AfkYmlRT/uuIhmhQHIhNyKa1SeQzrAZ+4L7iHZO46se75lg+SNOSE4O0ayA14DgZLfwpASbxR2mgLR9NsW+KE4K+1LXrnLT13NK7ljRaclZq40T/ENDmuzwuXPCsp4C4go9gIipyyl+VmBXzY5SAiBGcruDv2NmYQO6ck0dLQMhI1a4qP1QDfOnLseFRlxF5QGvPJ2iCQnsknudZBdropxzLajRotsNXC79LPY0EUxzqS3DHec9mXu66LhanhnrYj12C6XWpCUFZpw==|920

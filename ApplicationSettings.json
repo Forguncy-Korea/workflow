@@ -1,17 +1,14 @@
 {
   "IntegrateWithOtherApplication": {
-    "Password": "vZzMk#GYH$c9"
+    "Password": "p&3(H7~e(fIi"
   },
   "ShareCommandContainers": [],
   "ListviewLoadingIndicatorSettings": {},
   "GlobalProperties": [],
-  "WebSitePort": 12733,
-  "UserServicePort": 14014,
-  "ExecConcurrentScheduledTasks": false,
+  "WebSitePort": 51409,
+  "UserServicePort": 12964,
   "StartDateFiscalYear": 4,
   "BaseOnStartingMonth": true,
-  "KeepMasterPage": false,
-  "NameConflictPolicy": 1,
   "MultipleLanguageSettings": {
     "Languages": [
       {

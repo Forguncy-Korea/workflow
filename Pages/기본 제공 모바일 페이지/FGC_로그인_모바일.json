@@ -58,7 +58,7 @@
     "Count": 19
   },
   "Values": {
-    "8,3": "FGC_WelcomeToLogin",
+    "8,3": "로그인을 환영합니다",
     "20,3": "FGC_로그인",
     "23,3": "비밀번호를 잊으셨습니까?",
     "28,1": "관리자 계정：Administrator\n비밀번호：123456"
@@ -68,7 +68,7 @@
       "CellType": {
         "$type": "Forguncy.ImageCellType, ServerDesignerCommon",
         "TemplateKey": "_RS_Normal1",
-        "ImagePath": "fgc_logo_dark.png"
+        "ImagePath": "fgc_logo_dark.svg"
       }
     },
     "12,3": {
@@ -86,7 +86,7 @@
         },
         "IconSize": 18.0,
         "TemplateKey": "_RS_NewUnderline",
-        "WaterMark": "FGC_EnterUserName",
+        "WaterMark": "사용자 이름을 입력하세요",
         "ForguncyAttribute": "LogIn_Username"
       },
       "DataValidationInfo": {
@@ -109,7 +109,7 @@
         },
         "IconSize": 18.0,
         "TemplateKey": "_RS_NewUnderline",
-        "WaterMark": "FGC_EnterPassword",
+        "WaterMark": "비밀번호를 입력 해주세요",
         "ForguncyAttribute": "LogIn_Password"
       },
       "DataValidationInfo": {
@@ -299,4 +299,4 @@
       "Size": "340,460"
     }
   ]
-}//taCcpb9ohHhnQxgw1FT2cd4087QWJF5z/1+pKdyEXFCLdRRYWZfoVhWJhALwaOtkDfMbNL/CerCAm8rHV9EaCihUzKnZcB3lH8ai7Q0GriND991TO5hagJBeronPcIXTif07CXbNfylfJ7UKB019O6HohcEh2SpGvjv9lslGWo9LlvCcFRzfzsu62+g6OhcM7ED7Hf5WdBlJsZOGomJxojDqhq8OGG5Cm2ZVg8mB7GHdTqq4xxzZ4/5lbuwRhQPkNWip/fvkclrwFC2gudoq5eAhDkO/qmM4wspiZJ+jHR0db2dcCo2fmACsUL+45AGH72MjmGPAufutNlktBmb8kEW6v2z9uh7vBg8XBSOOjBlWCkBP6k/hKgUrmCcFu+dkJFFwI3oRDCHXjIMfiiyh1zvVBBhCPqQHtTOLdqQkP3XXCTL24HOvw3Ui+nzsQNfrBB17QyhAx2TUYdAlKJFA3l9kpIs3c1LzzEFsvsYc44MsnnnFfJn7IFhIU7ds92BlVcyagAqwVYYy+OGfwDeNaQVZ/4nLLx2Qgb55D2nCzqtkVK4/wKGhEkHbKWodPTNX2h6bpIV1fC7lfHZXNvCUvpzEl3aqbZYTbZp/LULIHceEDNiJQTqSFaXWhOX5fyz9LncJDEPnIqU0OIaV/KlLmCQtKM0dkUHPKtGXYeVI0zcYtHJ19f4TY+UwLxJRGN8QgTZobfc4AocDArRk9tj5nWgerumNrtynSHUDavn2YE+MfxLQC97tA29h46pdKUQjN83CISsYpLyRrEekWKBfwX514vCfWbJilneRvN5JASzbdW0rwQ12+u4HCLIP+dvaevLUnewktM3aenwk/pZv2X1FS1kvcNt/yXiUwPWKIa0gwoweU2ANFRvPGjG4sIKcctrgFFkGBPS/ptL8TIJfvw==|920
+}//jsxiGITU8zQZcU/UHKMuo2Aclz+X9aNa4bDik0MoCoxkogd1P1laKQCDuMYbb2sf7ONZL8RcxEhNULerPG7iT9Xf4nSRQeE1U60/AfD/CnMRP3NQ8R3fUkkr1oJDL4MmZtZrrvXVw+oRXFZWN9/XkhK+Yo1XxhttaDFs09vOpGSQiycBEsLtsAxJEQSqXcwCGKkBInjKQh1cYvCCu/y1XpMwMKbvoRKao5hdbVCsCtSAKIprte1rhBjwLSQ9ScWnhYa5MHE9lp0T/qKToIODqu17rk8rSdRsq7ZYRNvJ8Qhfg4M7EUeaxwXrbNnxOKhhuJDM0euR4ylNSmCbpeQGz4g6gDnAqg+WlbYSjmJG28I25N2WzPPuwXcZPTPDuONvQdzZdyIbCg4SOOmUC8YcsMcAaIVLkydemaE5x8UAcEr56ABE2annjyW77W7kVuTF3XUw2EJIfJRhVHPOiFA730OvZGx8BnZdvhuzS2u6BUe0sU8xfrMF/FawIHyehnzTmANM5G15GTyubDgnAEJ9bVTBICiQw4Ln8UjDdUrbl4jhq7a1xWSvWIASd93VuB/4c5KZFyGD6puK8hdarwHXHYrJfRfwZP1gK7DnuNA13W8YYdQ1Mpq3W0DP8+J3NHatz6K22tVx0vImIsJ/lBdmNz+giX5e56/p7gNEUpUxYumgD1a8i/a7SlLlm+RrSvbLPam1VoG7BYG1fElOonI3ablpNQlew/vXVnb5BPIs5ekX+rE41GgoQBNNRal/+eH4Zsjso+AU9hMjXlDCg5+TebHhVm8D7WMfVrlTkIHO8lEK6AdhqtVkIbMrVr1maKBXD67/SG6tQ4F0/xdaAEoUgnHz1x0CW+yEh5SaOlqGslSP/N1tK8QKJgUWKFDniPuEI0s21J7WP//m0dSyAmgOxQ==|920
