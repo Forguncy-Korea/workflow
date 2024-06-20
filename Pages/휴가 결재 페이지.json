@@ -1,6 +1,11 @@
 {
   "Rows": {
     "RowColumnAttachedInfos": {
+      "2": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 13.0
+        }
+      },
       "3": {
         "GridRowColumnDefinition": {
           "DesignLengthInPixel": 9.0
@@ -82,11 +87,6 @@
         }
       },
       "34": {
-        "GridRowColumnDefinition": {
-          "DesignLengthInPixel": 13.0
-        }
-      },
-      "2": {
         "GridRowColumnDefinition": {
           "DesignLengthInPixel": 13.0
         }
@@ -266,52 +266,19 @@
       }
     },
     "8,17": {
-      "ConditionFormatRulesCollection": {
-        "Rules": [
-          {
-            "$type": "Forguncy.ConditionFormat.CellValueRule, ServerDesignerCommon",
-            "Operator": 3,
-            "Value1": "=\"반려\"",
-            "StyleInfo": {
-              "Foreground": "#FFFF0000",
-              "Underline": null,
-              "Strikethrough": null
-            }
-          }
-        ]
-      }
+      "RulesGuidList": [
+        "28618e98-78b6-4a8e-a0d5-9141d605c9a5"
+      ]
     },
     "8,21": {
-      "ConditionFormatRulesCollection": {
-        "Rules": [
-          {
-            "$type": "Forguncy.ConditionFormat.CellValueRule, ServerDesignerCommon",
-            "Operator": 3,
-            "Value1": "=\"반려\"",
-            "StyleInfo": {
-              "Foreground": "#FFFF0000",
-              "Underline": null,
-              "Strikethrough": null
-            }
-          }
-        ]
-      }
+      "RulesGuidList": [
+        "9bd99222-b404-4d8c-9acf-49de41374b87"
+      ]
     },
     "8,25": {
-      "ConditionFormatRulesCollection": {
-        "Rules": [
-          {
-            "$type": "Forguncy.ConditionFormat.CellValueRule, ServerDesignerCommon",
-            "Operator": 3,
-            "Value1": "=\"반려\"",
-            "StyleInfo": {
-              "Foreground": "#FFFF0000",
-              "Underline": null,
-              "Strikethrough": null
-            }
-          }
-        ]
-      }
+      "RulesGuidList": [
+        "c29cafba-ae0c-4d6a-8480-2b79b2f1c979"
+      ]
     },
     "9,38": {
       "BindingInfo": {
@@ -1163,7 +1130,46 @@
     },
     "RowBreakLines": [],
     "RepeatRangeSettings": [],
-    "RelatedDataTableName": "휴가요청테이블"
+    "RelatedDataTableName": "휴가요청테이블",
+    "ConditionFormatRulesCollection": {
+      "Rules": [
+        {
+          "$type": "Forguncy.ConditionFormat.CellValueRule, ServerDesignerCommon",
+          "Operator": 3,
+          "Value1": "=\"반려\"",
+          "GUID": "28618e98-78b6-4a8e-a0d5-9141d605c9a5",
+          "StyleInfo": {
+            "Foreground": "#FFFF0000",
+            "Underline": null,
+            "Strikethrough": null
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.CellValueRule, ServerDesignerCommon",
+          "Operator": 3,
+          "Value1": "=\"반려\"",
+          "Priority": 1,
+          "GUID": "9bd99222-b404-4d8c-9acf-49de41374b87",
+          "StyleInfo": {
+            "Foreground": "#FFFF0000",
+            "Underline": null,
+            "Strikethrough": null
+          }
+        },
+        {
+          "$type": "Forguncy.ConditionFormat.CellValueRule, ServerDesignerCommon",
+          "Operator": 3,
+          "Value1": "=\"반려\"",
+          "Priority": 2,
+          "GUID": "c29cafba-ae0c-4d6a-8480-2b79b2f1c979",
+          "StyleInfo": {
+            "Foreground": "#FFFF0000",
+            "Underline": null,
+            "Strikethrough": null
+          }
+        }
+      ]
+    }
   },
   "PrintInfo": {
     "ColumnStart": 2,
@@ -1190,4 +1196,4 @@
       "Formula": "'휴가 결재 페이지'!$AM$10"
     }
   ]
-}//ui213Y2ricNdkSod81xCods7lFJhzquXjnZqd+ILwwJ/36RHvkGS8i58IU8nfF3qsbY4fNBOt1ljNM1MSKaofw9i6R9MxsnhvKWERWqsADfOfyBzFtdKsYr3RRkeCwjKoqhsJfm3qBx+bE+ZzUJ+5TABtNcd5fvqLR6GFf5lVAIk/uBPdNYkG9ab3GInffPsFaYFRvFDWihOcSvFxIxj7i1TiufiytRDeANSwoPu41buYogVsnMrSWrGqGl4rxuXe17mD+knZM/h0UWXgvOHRwmyitK6fGCKZ0gPk7lEyIIh2IXB7JnHYm9i0t6y0FwIfc8LOXQSJWBSLzUGY2r9H8BL1MoEwC9W2nt2yOz2/9tgTfZ77c9sFpeCustEAqPvuPixhDtP0js9ZBgGxdoBnQACjvu2GoLXw5X2nzKmOOdveXtb/b4ejM6ooz0xt8TlwcUZ76+WaPKIv6Kxe3BBpBiXQNSNLSgN/lfwm3+VYYvHm2U4vhlJWuwUfC/e2OkK+eMoE/bqbdZkpEpPUK68ZITMz9u4I31uz4/UikxQMvXajm6diUuI6L1hPTmf2cabghN5BCFYG89petEoXVIZe9v0QURDFKLtmKYr2ZDwqTS/T0CdSb9+NC3CEMAkBgasKkMVJ2YxPdPI+QVDAZxVLQTFjJ9Cpng9hUjE0uPI+h7KKPW12ljo//o7AmD/G3lWOokpJBnc85LujlvGues32JMYyQEbwOxbMKAE+hybDu5aMNubD969GZXHz/QkgRirSOb8KMjId+gofvXlwvw293nVzdsbg6Qt9mutHjlgey0CcFGdMljqFpgoktr4gM4IPP3MOllBOxq+VhpA6Itye15D0t/fU0N3J0PZrUwKip8oZ4eM64m9bwG1k5RhrWWdmqkavID9oZDACCE43ho4BA==|920
+}//xKRZax2789HPIVqR3F216NCB130IGOiUUOG5HQvZkDo6RY8twKFWXQ1mkDUfCo13f5f01PvXx5TYKRlTE9DoFSfK0SbsvBBhQ8EVheyJq35tr9/0WtbU/Mt5M3aSSWhkSS67ivE0AG8d2K1U2IqCPW4XQF/uGQU5GczCcFNO3VL8FGA8bKsdfa22Du4TDGtlZ17NuNTlTBdVH8+FDTq6OLc4wD6eediP7Z1+7VgtfAW+K9aDKyq/LBeL6d5PF3XmdmHlYJ8CW5Ai51xYnx2di1EszFO90LcCMewxUDJkKowd4xUkEOABiICWBHFA2362O4Vfp4S61b0lVY7eyuXlxWeRQvN7TzOUVJXfKAujCEesf7GSRXZdTK09dE9l4wZ69U0dk65XglIAiLmm1HaB8N8Pw9cr9kBXPZr89myH+WsmN1RNGp6NhwOkipgg6dEgcwzMIE3lrskN31m2xxJnozY/EKMVIhsTwA6gjE4MVf9pscIr3iwpUIXsXxgYjImQBvgsbVHZkk+i0G3slbnbvK/aFBosuvVscOAo0KthgyRnmanE0eiyS0gjr+GbZ1ZdIGubcWMyRYERi9LQFptR+r7OFdWUUVdQO0n7JP6PKESI8eQ0ok5PXG3if5iAk5ZDIit8ZABZWmLAOdnKeC+V4JTmOpJQuIA2zhM8cMZZNIMstjhN1zLYvWrTpSwFguIuV+0+kB6hoY6ErZAHzTQN4MHnVKOgEst9DaeWruZO71YuT+kBrAJN9fl2VB/ivAv+166VvkXqDkmhYttgZZNLPZIJXsUezuHA59fRUmquv5+0y9Jd+OWwVjqnvnHvJfyQWlCBgiQUOMlGU7xBvW3FiM4NgtRc1B8Hp0uwEL5NTEKJgU1PHLco1Gb15v+nVxJOc1usrJFyeu/OsFKaEaJUkQ==|920

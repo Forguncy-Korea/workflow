@@ -2,10 +2,41 @@
   "IntegrateWithOtherApplication": {
     "Password": "vZzMk#GYH$c9"
   },
+  "ShareCommandContainers": [],
   "ListviewLoadingIndicatorSettings": {},
   "GlobalProperties": [],
   "WebSitePort": 12733,
   "UserServicePort": 14014,
-  "StartPage": "휴가 리스트 페이지",
-  "StartDateFiscalYear": 4
+  "ExecConcurrentScheduledTasks": false,
+  "StartDateFiscalYear": 4,
+  "BaseOnStartingMonth": true,
+  "KeepMasterPage": false,
+  "NameConflictPolicy": 1,
+  "MultipleLanguageSettings": {
+    "Languages": [
+      {
+        "Name": "kr",
+        "IsDefault": true,
+        "Description": "한국어가 내장되어 있어 삭제할 수 없습니다.",
+        "IsBuildIn": true,
+        "LanguageAttribute": "ko-kr",
+        "FontFamily": "Body"
+      },
+      {
+        "Name": "en",
+        "Description": "영어가 내장되어 있어 삭제할 수 없습니다.",
+        "IsBuildIn": true,
+        "LanguageAttribute": "en",
+        "FontFamily": "Calibri"
+      }
+    ],
+    "PublicResource": {},
+    "RuntimeBuiltInResource": {
+      "FrontEndResources": {},
+      "ServerResources": {},
+      "ProcessDesignerResource": {},
+      "ProcessTrackerResource": {}
+    },
+    "PluginResource": {}
+  }
 }
